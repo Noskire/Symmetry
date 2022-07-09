@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://src/Piece.tscn" type="PackedScene" id=3]
+
+[sub_resource type="TileSet" id=1]
+0/name = "icon.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 256, 256 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="Inventory" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 256, 256 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0 )
+
+[node name="Piece" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1063.45, 304.322 )
+size_x = 2
+
+[node name="Piece2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1711.16, 312.808 )
+
+[node name="Piece3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1063.45, 853.038 )
+size_x = 2
+size_y = 1
+
+[node name="Piece4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1705.5, 875.665 )
+size_y = 1
